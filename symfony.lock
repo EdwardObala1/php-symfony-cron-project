@@ -285,6 +285,9 @@
             "ref": "4ea4a4b6730f83239608d7d4c849533645c70169"
         }
     },
+    "sonata-project/doctrine-orm-admin-bundle": {
+        "version": "4.7.0"
+    },
     "sonata-project/exporter": {
         "version": "2.12",
         "recipe": {
@@ -713,6 +716,9 @@
     },
     "theseer/tokenizer": {
         "version": "1.2.1"
+    },
+    "twbs/bootstrap": {
+        "version": "5.2.0"
     },
     "twig/extra-bundle": {
         "version": "v3.4.0"

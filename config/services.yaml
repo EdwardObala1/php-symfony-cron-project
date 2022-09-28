@@ -27,3 +27,24 @@ services:
         class: App\Admin\BlogsAdmin
         tags:
             - { name: sonata.admin , model_class: App\Entity\Blogs, manager_type: orm, label: Blogs}
+
+    admin.content:
+        class: App\Admin\ContentAdmin
+        tags:
+            - { name: sonata.admin , model_class: App\Entity\Content, manager_type: orm, label: Content}
+
+
+    admin.media:
+        class: App\Admin\MediaAdmin
+        tags:
+            - { name: sonata.admin , model_class: App\Entity\Media, manager_type: orm, label: Media}
+
+    admin.documents:
+        class: App\Admin\DocumentsAdmin
+        tags:
+            - { name: sonata.admin , model_class: App\Entity\Documents, manager_type: orm, label: Documents}
+
+    admin.contacts:
+        class: App\Admin\ContactsAdmin
+        tags:
+            - { name: sonata.admin , model_class: App\Entity\Contacts, manager_type: orm, label: Contacts}

@@ -9,36 +9,36 @@ use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
-final class BlogsAdmin extends AbstractAdmin
+final class MediaAdmin extends AbstractAdmin
 {
     protected function configureFormFields(FormMapper $form): void
     {
-        $form->add('title', TextType::class);
-        $form->add('blog', TextType::class);
-        $form->add('publish_date', DateType::class);
+        $form->add('description', TextType::class);
+        $form->add('location', TextType::class);
+        $form->add('link', DateType::class);
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagrid): void
     {   
         $datagrid->add('id');
-        $datagrid->add('title');
-        $datagrid->add('blog');
-        $datagrid->add('publish_date');
+        $datagrid->add('description');
+        $datagrid->add('location');
+        $datagrid->add('link');
     }
 
     protected function configureListFields(ListMapper $list): void
     {   
         $list->addIdentifier('id', 'identifier', ['label' => 'ID']);
-        $list->addIdentifier('title');
-        $list->addIdentifier('blog');
-        $list->addIdentifier('publish_date');
+        $list->addIdentifier('description');
+        $list->addIdentifier('location');
+        $list->addIdentifier('link');
     }
 
     protected function configureShowFields(ShowMapper $show): void
     {   
         $show->add('id');
-        $show->add('title');
-        $show->add('blog');
-        $show->add('publish_date');
+        $show->add('description');
+        $show->add('location');
+        $show->add('link');
     }
 }

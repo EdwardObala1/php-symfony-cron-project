@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "30c75b2265b6cfcc04f6b572fcaf6861",
+    "content-hash": "d33abae2ff126752b3ba5024c971bec2",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -3347,6 +3347,109 @@
                 }
             ],
             "time": "2022-05-24T20:47:33+00:00"
+        },
+        {
+            "name": "sonata-project/intl-bundle",
+            "version": "2.14.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sonata-project/SonataIntlBundle.git",
+                "reference": "0d58197da26281ca5541b8b3fdcf81f8a98ffb0b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sonata-project/SonataIntlBundle/zipball/0d58197da26281ca5541b8b3fdcf81f8a98ffb0b",
+                "reference": "0d58197da26281ca5541b8b3fdcf81f8a98ffb0b",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 || ^8.0",
+                "symfony/config": "^4.4 || ^5.4 || ^6.0",
+                "symfony/dependency-injection": "^4.4.8 || ^5.4 || ^6.0",
+                "symfony/http-foundation": "^4.4 || ^5.4 || ^6.0",
+                "symfony/http-kernel": "^4.4.13 || ^5.4 || ^6.0",
+                "symfony/intl": "^4.4 || ^5.4 || ^6.0",
+                "symfony/translation-contracts": "^2.5 || ^3.0",
+                "twig/twig": "^2.9 || ^3.0"
+            },
+            "conflict": {
+                "sonata-project/user-bundle": "<3.6"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.4",
+                "matthiasnoback/symfony-config-test": "^4.2",
+                "matthiasnoback/symfony-dependency-injection-test": "^4.0",
+                "phpstan/extension-installer": "^1.0",
+                "phpstan/phpstan": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "phpstan/phpstan-strict-rules": "^1.0",
+                "phpstan/phpstan-symfony": "^1.0",
+                "phpunit/phpunit": "^9.5",
+                "psalm/plugin-phpunit": "^0.17",
+                "psalm/plugin-symfony": "^3.0",
+                "rector/rector": "^0.14",
+                "symfony/phpunit-bridge": "^6.1",
+                "symfony/security-core": "^4.4.23 || ^5.4 || ^6.0",
+                "symfony/templating": "^4.4 || ^5.4 || ^6.0",
+                "vimeo/psalm": "^4.7.2"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sonata\\IntlBundle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Rabaix",
+                    "email": "thomas.rabaix@sonata-project.org"
+                },
+                {
+                    "name": "Sonata Community",
+                    "homepage": "https://github.com/sonata-project/SonataIntlBundle/contributors"
+                }
+            ],
+            "description": "Symfony SonataIntlBundle",
+            "homepage": "https://docs.sonata-project.org/projects/SonataIntlBundle",
+            "keywords": [
+                "date",
+                "intl",
+                "number",
+                "sonata",
+                "time"
+            ],
+            "support": {
+                "issues": "https://github.com/sonata-project/SonataIntlBundle/issues",
+                "source": "https://github.com/sonata-project/SonataIntlBundle/tree/2.14.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/OskarStark",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/VincentLanglet",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/greg0ire",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/jordisala1991",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-10-06T06:45:18+00:00"
         },
         {
             "name": "sonata-project/twig-extensions",
@@ -9128,17 +9231,66 @@
             "time": "2022-01-26T16:32:32+00:00"
         },
         {
-            "name": "twbs/bootstrap",
-            "version": "5.2.0",
+            "name": "symfonycasts/verify-email-bundle",
+            "version": "v1.11.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "edf9c40956d19e6ab3f9151bfe0dfac6be06fa21"
+                "url": "https://github.com/SymfonyCasts/verify-email-bundle.git",
+                "reference": "725b33d1cdeda35055d3dee61f0c84c76f6da9ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/edf9c40956d19e6ab3f9151bfe0dfac6be06fa21",
-                "reference": "edf9c40956d19e6ab3f9151bfe0dfac6be06fa21",
+                "url": "https://api.github.com/repos/SymfonyCasts/verify-email-bundle/zipball/725b33d1cdeda35055d3dee61f0c84c76f6da9ae",
+                "reference": "725b33d1cdeda35055d3dee61f0c84c76f6da9ae",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "symfony/config": "^4.4 | ^5.0 | ^6.0",
+                "symfony/dependency-injection": "^4.4 | ^5.0 | ^6.0",
+                "symfony/deprecation-contracts": "^2.2 | ^3.0",
+                "symfony/http-kernel": "^4.4 | ^5.0 | ^6.0",
+                "symfony/routing": "^4.4 | ^5.0 | ^6.0"
+            },
+            "conflict": {
+                "symfony/framework-bundle": "<4.4"
+            },
+            "require-dev": {
+                "doctrine/orm": "^2.7",
+                "doctrine/persistence": "^2.0",
+                "symfony/framework-bundle": "^4.4 | ^5.0 | ^6.0",
+                "symfony/phpunit-bridge": "^5.0 | ^6.0",
+                "vimeo/psalm": "^4.3"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "SymfonyCasts\\Bundle\\VerifyEmail\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Simple, stylish Email Verification for Symfony",
+            "support": {
+                "issues": "https://github.com/SymfonyCasts/verify-email-bundle/issues",
+                "source": "https://github.com/SymfonyCasts/verify-email-bundle/tree/v1.11.0"
+            },
+            "time": "2022-07-12T16:51:29+00:00"
+        },
+        {
+            "name": "twbs/bootstrap",
+            "version": "v5.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "23e50829f958ea1d741d63e2781716be037e4644"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/23e50829f958ea1d741d63e2781716be037e4644",
+                "reference": "23e50829f958ea1d741d63e2781716be037e4644",
                 "shasum": ""
             },
             "replace": {
@@ -9173,9 +9325,9 @@
             ],
             "support": {
                 "issues": "https://github.com/twbs/bootstrap/issues",
-                "source": "https://github.com/twbs/bootstrap/tree/5.2.0"
+                "source": "https://github.com/twbs/bootstrap/tree/v5.2.1"
             },
-            "time": "2022-07-19T15:43:58+00:00"
+            "time": "2022-09-07T15:31:39+00:00"
         },
         {
             "name": "twig/extra-bundle",

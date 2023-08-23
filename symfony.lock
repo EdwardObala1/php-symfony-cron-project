@@ -309,6 +309,9 @@
             "config/packages/sonata_form.yaml"
         ]
     },
+    "sonata-project/intl-bundle": {
+        "version": "2.14.1"
+    },
     "sonata-project/twig-extensions": {
         "version": "1.10",
         "recipe": {
@@ -713,6 +716,9 @@
     },
     "symfony/yaml": {
         "version": "v5.4.3"
+    },
+    "symfonycasts/verify-email-bundle": {
+        "version": "v1.11.0"
     },
     "theseer/tokenizer": {
         "version": "1.2.1"

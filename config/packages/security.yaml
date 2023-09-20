@@ -38,7 +38,7 @@ security:
         ROLE_ADMIN: ROLE_USER
 
     access_control:
-        - { path: ^/dashboard/*, roles: ROLE_ADMIN }
+        # - { path: ^/dashboard/*, roles: ROLE_ADMIN }
         # - { path: ^/users/*, roles: ROLE_USER }
 
 when@test:
@@ -53,3 +53,5 @@ when@test:
                 cost: 4 # Lowest possible value for bcrypt
                 time_cost: 3 # Lowest possible value for argon
                 memory_cost: 10 # Lowest possible value for argon
+            App\Entity\User:
+                alogrithm: auto

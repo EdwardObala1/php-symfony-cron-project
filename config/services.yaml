@@ -48,3 +48,13 @@ services:
         class: App\Admin\ContactsAdmin
         tags:
             - { name: sonata.admin , model_class: App\Entity\Contacts, manager_type: orm, label: Contacts}
+
+    admin.experiences:
+        class: App\Admin\ExperiencesAdmin
+        tags:
+            - { name: sonata.admin , model_class: App\Entity\Experiences, manager_type: orm, label: Experiences}
+    
+    admin.project:
+        class: App\Admin\ProjectsAdmin
+        tags:
+            - { name: sonata.admin , model_class: App\Entity\Projects, manager_type: orm, label: Projects}

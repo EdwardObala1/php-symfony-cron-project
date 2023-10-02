@@ -7,7 +7,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Sonata\AdminBundle\Admin\Pool;
 use FOS\RestBundle\View\ViewHandlerInterface;
 
-class ExperiencesController extends AbstractController
+class ProjectsController extends AbstractController
 {
 
     private $adminPool;
@@ -23,18 +23,17 @@ class ExperiencesController extends AbstractController
 
     // endpoint that exposes all the data
     /** 
-     * @Route("/api/experiences", name="apiexperiencces", methods={"GET"})
+     * @Route("/api/projects", name="apiprojects", methods={"GET"})
     */
 
     public function getData()
     {
-        $experiencesAdmin = $this->adminPool->getAdminByAdminCode('admin.experiences');
+        $experiencesAdmin = $this->adminPool->getAdminByAdminCode('admin.projects');
         $datagrid = $experiencesAdmin->getDatagrid();
 
         $datagrid->buildPager();
         $experiences = $datagrid->getResults();
         dump($experiences);
         exit;
-        // return $this->json($experiences);
     }
 }

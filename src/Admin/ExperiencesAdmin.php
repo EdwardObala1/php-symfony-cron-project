@@ -10,17 +10,33 @@ use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 final class ExperiencesAdmin extends AbstractAdmin
 {
     protected function configureFormFields(FormMapper $form): void
     {
         $form->add('title', TextType::class);
-        $form->add('startDate', DateType::class);
-        $form->add('endDate', DateType::class);
-        $form->add('location', TextType::class);
-        $form->add('remote', TextType::class);
-        $form->add('description', TextType::class);
+        $form->add('startDate', DateType::class, array(
+            'widget' => 'single_text',
+            'attr' => array('class' => 'form-control', 'style' => 'line-height: 20px; width:10%;'), 'label' => 'Start Date',
+          ));
+        $form->add('endDate', DateType::class, array(
+            'widget' => 'single_text',
+            'attr' => array('class' => 'form-control', 'style' => 'line-height: 20px; width:10%;'), 'label' => 'End Date',
+          ));
+        $form->add('location', TextType::class, array('attr' => array('class' => 'form-control location', 'style' => 'height:20%;')));
+        $form->add('remote', ChoiceType::class, [
+            'choices'  => [
+                'Remote' => '1',
+                'Not Remote' => '0',
+            ],
+            'expanded' => true,
+            'multiple' => false,  // ensure only one option can be selected
+        ]);
+        $form->add('description', TextType::class, array(
+            'attr' => array('class' => 'form-control-text')
+        ));
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagrid): void

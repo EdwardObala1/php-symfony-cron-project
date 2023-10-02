@@ -27,8 +27,8 @@ final class DocumentsAdmin extends AbstractAdmin
     protected function configureListFields(ListMapper $list): void
     {   
         $list->addIdentifier('id', 'identifier', ['label' => 'ID']);
-        $list->addIdentifier('title', ['label' => 'Title']);
-        $list->addIdentifier('location', ['label' => 'Location']);
+        $list->addIdentifier('title');
+        $list->addIdentifier('location');
     }
 
     protected function configureShowFields(ShowMapper $show): void

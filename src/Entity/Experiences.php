@@ -38,7 +38,7 @@ class Experiences
     private $location;
 
     /**
-     * @ORM\Column(type="binary")
+     * @ORM\Column(type="boolean")
      */
     private $remote;
 

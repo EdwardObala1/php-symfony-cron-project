@@ -32,10 +32,10 @@ final class ContactsAdmin extends AbstractAdmin
     protected function configureListFields(ListMapper $list): void
     {   
         $list->addIdentifier('id', 'identifier', ['label' => 'ID']);
-        $list->addIdentifier('contactName', ['label' => 'Contact Name']);
-        $list->addIdentifier('email', ['label' => 'Email']);
-        $list->addIdentifier('phoneNumber', ['label' => 'Phone Number']);
-        $list->addIdentifier('alternateEmail', ['label' => 'Alternate Email']);
+        $list->addIdentifier('contactName');
+        $list->addIdentifier('email');
+        $list->addIdentifier('phoneNumber');
+        $list->addIdentifier('alternateEmail');
     }
 
     protected function configureShowFields(ShowMapper $show): void

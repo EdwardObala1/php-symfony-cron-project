@@ -35,8 +35,9 @@ class ExperiencesController extends AbstractController
         $datagrid = $experiencesAdmin->getDatagrid();
 
         $datagrid->buildPager();
-        $products = $datagrid->getResults();
-        
-        return $this->json($products);
+        $experiences = $datagrid->getResults();
+        dump($experiences);
+        exit;
+        // return $this->json($experiences);
     }
 }

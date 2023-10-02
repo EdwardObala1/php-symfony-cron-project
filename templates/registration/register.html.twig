@@ -3,15 +3,43 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
-    <h1>Register</h1>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    {{ form_start(registrationForm) }}
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+                    <div class = 'row' style = 'margin-top:100px; text-align: center;'>
+                        <h3>Register</h3>
+                    </div>
 
-        <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
+                    <div class = 'row' style = 'margin:30px;'>
+                        {{ form_row(registrationForm.email, {label: 'Email'}) }}
+                    </div>
+
+                    <div class = 'row' style = 'margin:30px;'>    
+                        {{ form_row(registrationForm.plainPassword, {label: 'Password'}) }}
+                    </div>
+
+                    <div class = 'row' style = 'margin:30px;'>
+                    <label>Agree to the terms</label>
+                        {{ form_row(registrationForm.agreeTerms) }}
+                    </div>
+
+                    <div class = 'row' style = 'margin:30px;'>
+                        <button type="submit" class="btn btn-primary active" style = 'background-color:#86728D;'>Register</button>
+                    </div>
+
+                    <div class = 'row' style = 'margin:30px;'>
+                        <a href= '/login'>Already have an account</a>
+                    </div>
+                    {{ form_end(registrationForm) }}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
 {% endblock %}

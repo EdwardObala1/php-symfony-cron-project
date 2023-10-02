@@ -22,3 +22,39 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    admin.blogs:
+        class: App\Admin\BlogsAdmin
+        tags:
+            - { name: sonata.admin , model_class: App\Entity\Blogs, manager_type: orm, label: Blogs}
+
+    admin.content:
+        class: App\Admin\ContentAdmin
+        tags:
+            - { name: sonata.admin , model_class: App\Entity\Content, manager_type: orm, label: Content}
+
+
+    admin.media:
+        class: App\Admin\MediaAdmin
+        tags:
+            - { name: sonata.admin , model_class: App\Entity\Media, manager_type: orm, label: Media}
+
+    admin.documents:
+        class: App\Admin\DocumentsAdmin
+        tags:
+            - { name: sonata.admin , model_class: App\Entity\Documents, manager_type: orm, label: Documents}
+
+    admin.contacts:
+        class: App\Admin\ContactsAdmin
+        tags:
+            - { name: sonata.admin , model_class: App\Entity\Contacts, manager_type: orm, label: Contacts}
+
+    admin.experiences:
+        class: App\Admin\ExperiencesAdmin
+        tags:
+            - { name: sonata.admin , model_class: App\Entity\Experiences, manager_type: orm, label: Experiences}
+    
+    admin.project:
+        class: App\Admin\ProjectsAdmin
+        tags:
+            - { name: sonata.admin , model_class: App\Entity\Projects, manager_type: orm, label: Projects}

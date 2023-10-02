@@ -6,6 +6,7 @@ use App\Entity\Users;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\CallbackTransformer;
 
 class UsersType extends AbstractType
 {
@@ -13,7 +14,13 @@ class UsersType extends AbstractType
     {
         $builder
             ->add('email')
-            ->add('roles')
+            ->addModelTransformer(new CallbackTransformer(
+                function ($rolesAsArray) {
+                     return count($rolesAsArray) ? $rolesAsArray[0]: null;
+                },
+                function ($rolesAsString) {
+                     return [$rolesAsString];
+                }))
             ->add('password')
         ;
     }

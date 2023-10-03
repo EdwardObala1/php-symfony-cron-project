@@ -8,7 +8,7 @@ use Sonata\AdminBundle\Admin\Pool;
 use FOS\RestBundle\View\ViewHandlerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
-class ExperiencesController extends AbstractController
+class ContactsController extends AbstractController
 {
 
     private $adminPool;
@@ -24,16 +24,16 @@ class ExperiencesController extends AbstractController
 
     // endpoint that exposes all the data
     /** 
-     * @Route("/api/experiences", name="apiexperiencces", methods={"GET"})
+     * @Route("/api/contacts", name="apicontacts", methods={"GET"})
     */
 
     public function getData(): JsonResponse
     {
-        $experiencesAdmin = $this->adminPool->getAdminByAdminCode('admin.experiences');
-        $datagrid = $experiencesAdmin->getDatagrid();
+        $contactsAdmin = $this->adminPool->getAdminByAdminCode('admin.contacts');
+        $datagrid = $contactsAdmin->getDatagrid();
 
         $datagrid->buildPager();
-        $experiences = $datagrid->getResults();
-        return $this->json($experiences);
+        $contacts = $datagrid->getResults();
+        return $this->json($contacts);
     }
 }

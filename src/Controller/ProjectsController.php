@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Sonata\AdminBundle\Admin\Pool;
 use FOS\RestBundle\View\ViewHandlerInterface;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class ProjectsController extends AbstractController
 {
@@ -26,14 +27,13 @@ class ProjectsController extends AbstractController
      * @Route("/api/projects", name="apiprojects", methods={"GET"})
     */
 
-    public function getData()
+    public function getData(): JsonResponse
     {
-        $experiencesAdmin = $this->adminPool->getAdminByAdminCode('admin.projects');
-        $datagrid = $experiencesAdmin->getDatagrid();
+        $projectsAdmin = $this->adminPool->getAdminByAdminCode('admin.projects');
+        $datagrid = $projectsAdmin->getDatagrid();
 
         $datagrid->buildPager();
-        $experiences = $datagrid->getResults();
-        dump($experiences);
-        exit;
+        $projects = $datagrid->getResults();
+        return $this->json($projects);
     }
 }

@@ -1,0 +1,55 @@
+# Read the documentation: https://symfony.com/doc/current/bundles/FOSCKEditorBundle/index.html
+
+twig:
+    form_themes:
+        - '@FOSCKEditor/Form/ckeditor_widget.html.twig'
+
+# config/packages/fos_ck_editor.yaml
+# config/packages/fos_ckeditor.yaml
+fos_ck_editor:
+    configs:
+        default:
+            removePlugins: exportpdf
+            # height: 200
+        main_config:
+            allowedContent: true # Disable filtering in the source code, for example on adding HTML properties
+            height: 850
+            width: 1000
+            toolbar:
+                - {
+                    name: "styles",
+                    items: 
+                      [
+                        "Bold",
+                        "Italic",
+                        "Underline",
+                        "Strike",
+                        "CodeSnippet", 
+                        "Code",
+                        "Blockquote",
+                        "-",
+                        "Link",
+                        "-",
+                        "RemoveFormat",
+                        "NumberedList",
+                        "BulletedList",
+                        "-",
+                        "Outdent",
+                        "Indent",
+                        "-",
+                        "-",
+                        "JustifyLeft",
+                        "JustifyCenter",
+                        "JustifyRight",
+                        "JustifyBlock",
+                        "-",
+                        "Image",
+                        "Table",
+                        "-",
+                        "TextColor",
+                        "BGColor",
+                        "HorizontalRule",
+                        "/",
+                        "Styles", "Format", "Font", "FontSize", "Source",
+                      ]
+                  }

@@ -11,6 +11,7 @@ use Sonata\AdminBundle\Show\ShowMapper;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 
 final class ExperiencesAdmin extends AbstractAdmin
 {
@@ -34,7 +35,7 @@ final class ExperiencesAdmin extends AbstractAdmin
             'expanded' => true,
             'multiple' => false,  // ensure only one option can be selected
         ]);
-        $form->add('description', TextType::class, array(
+        $form->add('description', CKEditorType::class, array(
             'attr' => array('class' => 'form-control-text')
         ));
     }

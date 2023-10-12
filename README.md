@@ -20,3 +20,5 @@
 <a href = 'https://symfony.com/doc/current/setup.html' >here</a>
 * after cloning the whole git repo run `symfony composer install`
 * after this run `symfony server:start`
+
+## Learnings from CKEditor Here

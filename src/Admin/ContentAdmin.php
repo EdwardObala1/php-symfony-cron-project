@@ -9,14 +9,15 @@ use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 
 final class ContentAdmin extends AbstractAdmin
 {
     protected function configureFormFields(FormMapper $form): void
     {
         $form->add('title', TextType::class);
-        $form->add('body', TextType::class);
-        $form->add('media', DateType::class);
+        $form->add('body', CKEditorType::class);
+        // $form->add('media', DateType::class);
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagrid): void

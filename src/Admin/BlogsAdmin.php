@@ -8,13 +8,14 @@ use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 
 final class BlogsAdmin extends AbstractAdmin
 {
     protected function configureFormFields(FormMapper $form): void
     {
         $form->add('title', TextType::class);
-        $form->add('blog', TextType::class);
+        $form->add('blog', CKEditorType::class);
         $form->add('publish_date', DateType::class);
     }
 

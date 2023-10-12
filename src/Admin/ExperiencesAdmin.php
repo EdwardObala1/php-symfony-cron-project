@@ -55,8 +55,8 @@ final class ExperiencesAdmin extends AbstractAdmin
     {
         $list->addIdentifier('id', 'identifier', ['label' => 'ID']);
         $list->add('title');
-        $list->add('startDate');
-        $list->add('endDate');
+        $list->add('startDate', 'date', ['label' => 'Start Date']);
+        $list->add('endDate', 'date', ['label' => 'End Date']);
         $list->add('location');
         $list->add('remote');
         $list->add('description');

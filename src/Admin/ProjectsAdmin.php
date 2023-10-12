@@ -10,13 +10,14 @@ use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 
 final class ProjectsAdmin extends AbstractAdmin
 {
     protected function configureFormFields(FormMapper $form): void
     {
         $form->add('title', TextType::class);
-        $form->add('description', TextType::class);
+        $form->add('description', CKEditorType::class);
         $form->add('projectlink', TextType::class);
         $form->add('icons', TextType::class);
     }

@@ -34,6 +34,12 @@ final class ContentAdmin extends AbstractAdmin
         $list->addIdentifier('title');
         $list->addIdentifier('body');
         $list->addIdentifier('media');
+        $list->add('_action', 'actions', [
+            'label' => 'Actions',
+            'actions' => [
+                'edit' => [],
+            ],
+        ]);
     }
 
     protected function configureShowFields(ShowMapper $show): void

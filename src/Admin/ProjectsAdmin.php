@@ -38,6 +38,12 @@ final class ProjectsAdmin extends AbstractAdmin
         $list->add('description');
         $list->add('projectlink');
         $list->add('icons');
+        $list->add('_action', 'actions', [
+            'label' => 'Actions',
+            'actions' => [
+                'edit' => [],
+            ],
+        ]);
     }
 
     protected function configureShowFields(ShowMapper $show): void

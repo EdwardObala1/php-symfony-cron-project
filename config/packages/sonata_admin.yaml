@@ -7,6 +7,9 @@ sonata_admin:
         groups:
             default: # This is the default group
                 label: My Content
+    templates:
+        edit: '@SonataAdmin/CRUD/edit.html.twig'
+        tab_menu_template: '@SonataAdmin/Core/tab_menu_template.html.twig'
 
 sonata_block:
     blocks:

@@ -16,7 +16,7 @@ final class MediaAdmin extends AbstractAdmin
     {
         $form->add('description', TextType::class);
         $form->add('location', TextType::class);
-        $form->add('link', DateType::class);
+        $form->add('link', TextType::class);
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagrid): void

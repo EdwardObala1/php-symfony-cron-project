@@ -1,6 +1,6 @@
 sonata_admin:
     title: "My Dashboard"
-    # title_logo: https://www.istockphoto.com/illustrations/tool-kit
+    title_logo: /images/myimage.jpg
     dashboard:
         blocks:
             - { type: sonata.admin.block.admin_list, position: left }

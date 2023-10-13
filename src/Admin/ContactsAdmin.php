@@ -36,6 +36,12 @@ final class ContactsAdmin extends AbstractAdmin
         $list->addIdentifier('email');
         $list->addIdentifier('phoneNumber');
         $list->addIdentifier('alternateEmail');
+        $list->add('_action', 'actions', [
+            'label' => 'Actions',
+            'actions' => [
+                'edit' => [],
+            ],
+        ]);
     }
 
     protected function configureShowFields(ShowMapper $show): void

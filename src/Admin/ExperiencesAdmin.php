@@ -60,14 +60,20 @@ final class ExperiencesAdmin extends AbstractAdmin
         $list->add('location');
         $list->add('remote');
         $list->add('description');
+        $list->add('_action', 'actions', [
+            'label' => 'Actions',
+            'actions' => [
+                'edit' => [],
+            ],
+        ]);
     }
 
     protected function configureShowFields(ShowMapper $show): void
     {
         $show->add('id');
         $show->add('title');
-        $show->add('startDate');
-        $show->add('endDate');
+        $show->add('startDate', 'date', ['label' => 'Start Date']);
+        $show->add('endDate', 'date', ['label' => 'End Date']);
         $show->add('location');
         $show->add('remote');
         $show->add('description');

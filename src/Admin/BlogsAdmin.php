@@ -33,6 +33,12 @@ final class BlogsAdmin extends AbstractAdmin
         $list->addIdentifier('title');
         $list->addIdentifier('blog');
         $list->addIdentifier('publish_date');
+        $list->add('_action', 'actions', [
+            'label' => 'Actions',
+            'actions' => [
+                'edit' => [],
+            ],
+        ]);
     }
 
     protected function configureShowFields(ShowMapper $show): void

@@ -33,6 +33,12 @@ final class MediaAdmin extends AbstractAdmin
         $list->addIdentifier('description');
         $list->addIdentifier('location');
         $list->addIdentifier('link');
+        $list->add('_action', 'actions', [
+            'label' => 'Actions',
+            'actions' => [
+                'edit' => [],
+            ],
+        ]);
     }
 
     protected function configureShowFields(ShowMapper $show): void

@@ -4,6 +4,10 @@ sonata_admin:
     dashboard:
         blocks:
             - { type: sonata.admin.block.admin_list, position: left }
+            # add another one here for downloading the cv and resume
+            # also add a section for potential employers reaching out in the future.
+            # add a progress tracker in js
+            # The above are not a huge priority right now get done with the main portfolio these will come along as time goes by
         groups:
             default: # This is the default group
                 label: My Content

@@ -23,6 +23,11 @@ class Blogs
     private $title;
 
     /**
+     * @ORM\Column(type="string")
+     */
+    private $image_link;
+
+    /**
      * @ORM\Column(type="text", nullable=true)
      */
     private $blog;
@@ -45,6 +50,18 @@ class Blogs
     public function setTitle(string $title): self
     {
         $this->title = $title;
+
+        return $this;
+    }
+    
+    public function getImageLink(): ?string
+    {
+        return $this->image_link;
+    }
+
+    public function setImageLink(string $image_link): self
+    {
+        $this->image_link = $image_link;
 
         return $this;
     }

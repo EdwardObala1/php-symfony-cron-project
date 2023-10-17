@@ -15,6 +15,7 @@ final class BlogsAdmin extends AbstractAdmin
     protected function configureFormFields(FormMapper $form): void
     {
         $form->add('title', TextType::class);
+        $form->add('image_link', TextType::class);
         $form->add('blog', CKEditorType::class);
         $form->add('publish_date', DateType::class);
     }
@@ -23,6 +24,7 @@ final class BlogsAdmin extends AbstractAdmin
     {   
         $datagrid->add('id');
         $datagrid->add('title');
+        $datagrid->add('image_link');
         $datagrid->add('blog');
         $datagrid->add('publish_date');
     }
@@ -44,6 +46,7 @@ final class BlogsAdmin extends AbstractAdmin
     {   
         $show->add('id');
         $show->add('title');
+        $show->add('image_link');
         $show->add('blog');
         $show->add('publish_date');
     }

@@ -31,7 +31,6 @@ final class BlogsAdmin extends AbstractAdmin
     {   
         $list->addIdentifier('id', 'identifier', ['label' => 'ID']);
         $list->addIdentifier('title');
-        $list->addIdentifier('blog');
         $list->addIdentifier('publish_date');
         $list->add('_action', 'actions', [
             'label' => 'Actions',

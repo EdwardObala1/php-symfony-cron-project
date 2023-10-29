@@ -32,8 +32,9 @@ class APIJsonController extends AbstractController
         $experienceAdmin = $this->adminPool->getAdminByAdminCode('admin.experiences');
         $projectsAdmin = $this->adminPool->getAdminByAdminCode('admin.projects');
         $contentAdmin = $this->adminPool->getAdminByAdminCode('admin.content');
+        $blogsAdmin = $this->adminPool->getAdminByAdminCode('admin.blogs');
 
-        $datagrids = ['experiences' => $experienceAdmin->getDatagrid(), 'projects' => $projectsAdmin->getDatagrid(), 'content' => $contentAdmin->getDatagrid()];
+        $datagrids = ['experiences' => $experienceAdmin->getDatagrid(), 'projects' => $projectsAdmin->getDatagrid(), 'content' => $contentAdmin->getDatagrid(), 'blogs' => $blogsAdmin->getDatagrid()];
 
         $results = [];
         foreach($datagrids as $key => $datagrid){
